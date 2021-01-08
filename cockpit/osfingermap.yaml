@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+CentOS Linux-8:
+  packages:
+    - cockpit-pcp
+    - cockpit-podman
+    - subscription-manager-cockpit
+
+CentOS Linux-7:
+  packages:
+    - cockpit-kubernetes
+    - cockpit-machines-ovirt
+    - cockpit-pcp
+    - cockpit-subscriptions
+
+Ubuntu-20.04:
+  packages:
+    - cockpit-pcp

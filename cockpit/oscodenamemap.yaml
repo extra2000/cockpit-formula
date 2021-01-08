@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+openSUSE Tumbleweed:
+  packages:
+    - cockpit-kdump
+    - cockpit-networkmanager
+    - cockpit-packagekit
+    - cockpit-pcp
+    - cockpit-podman
+    - cockpit-storaged

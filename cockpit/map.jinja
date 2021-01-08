@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- import_yaml tplroot ~ "/defaults.yaml" as default_settings %}
+{%- import_yaml tplroot ~ "/kernelmap.yaml" as kernelmap %}
+{%- import_yaml tplroot ~ "/osfamilymap.yaml" as osfamilymap %}
+{%- import_yaml tplroot ~ "/osmap.yaml" as osmap %}
+{%- import_yaml tplroot ~ "/oscodenamemap.yaml" as oscodenamemap %}
+{%- import_yaml tplroot ~ "/osfingermap.yaml" as osfingermap %}
+
+{%- set _config = salt['config.get'](tplroot, default={}) %}
+
+{%- set vars = {
+      'kernelmap': salt['grains.filter_by'](kernelmap, grain='kernel') if salt['grains.filter_by'](kernelmap, grain='kernel') is mapping else {},
+      'osfamilymap': salt['grains.filter_by'](osfamilymap, grain='os_family') if salt['grains.filter_by'](osfamilymap, grain='os_family') is mapping else {},
+      'osmap': salt['grains.filter_by'](osmap, grain='os') if salt['grains.filter_by'](osmap, grain='os') is mapping else {},
+      'oscodenamemap': salt['grains.filter_by'](oscodenamemap, grain='oscodename') if salt['grains.filter_by'](oscodenamemap, grain='oscodename') is mapping else {},
+      'osfingermap': salt['grains.filter_by'](osfingermap, grain='osfinger') if salt['grains.filter_by'](osfingermap, grain='osfinger') is mapping else {}
+    }
+%}
+
+{%- set defaults = salt['grains.filter_by'](
+      default_settings,
+      default=tplroot,
+      merge=salt['grains.filter_by'](
+        _config,
+        default='lookup',
+        merge=salt['slsutil.merge'](vars.kernelmap, salt['slsutil.merge'](vars.osfamilymap, salt['slsutil.merge'](vars.osmap, salt['slsutil.merge'](vars.oscodenamemap, vars.osfingermap, merge_lists=True), merge_lists=True), merge_lists=True), merge_lists=True)
+      )
+    )
+%}
+
+{%- set config = salt['grains.filter_by']({'defaults': defaults}, default='defaults', merge=_config) %}
+
+{%- set COCKPIT = config %}

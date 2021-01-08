@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+Linux:
+  packages:
+    - cockpit
+    - cockpit-machines
+    - pcp
+  services:
+    - pmcd.service
+    - pmlogger.service
+    - cockpit.socket
+  dashboard:
+    packages:
+      - cockpit-dashboard
