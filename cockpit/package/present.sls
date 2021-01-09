@@ -13,3 +13,9 @@ cockpit-dashboard-present:
   pkg.installed:
     - pkgs: {{ COCKPIT.dashboard.packages }}
 {% endif %}
+
+{% if COCKPIT.machines.enabled %}
+cockpit-machines-present:
+  pkg.installed:
+    - pkgs: {{ COCKPIT.machines.packages }}
+{% endif %}

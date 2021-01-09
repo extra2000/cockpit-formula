@@ -4,7 +4,6 @@
 Linux:
   packages:
     - cockpit
-    - cockpit-machines
     - pcp
   services:
     - pmcd.service
@@ -13,3 +12,6 @@ Linux:
   dashboard:
     packages:
       - cockpit-dashboard
+  machines:
+    packages:
+      - cockpit-machines

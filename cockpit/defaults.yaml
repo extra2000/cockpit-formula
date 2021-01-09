@@ -4,3 +4,5 @@
 cockpit:
   dashboard:
     enabled: false
+  machines:
+    enabled: true
