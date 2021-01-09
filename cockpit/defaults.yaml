@@ -3,4 +3,4 @@
 
 cockpit:
   dashboard:
-    enabled: false      
+    enabled: false
