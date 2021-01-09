@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.0.1](https://github.com/extra2000/cockpit-formula/compare/v1.0.0...v1.0.1) (2021-01-09)
+
+
+### Styles
+
+* **cockpit/defaults.yaml:** Remove trailing spaces ([2b938ee](https://github.com/extra2000/cockpit-formula/commit/2b938eed6d4b0ca9eac4c44208270d2c78828c81))
+
+
+### Fixes
+
+* **cockpit-machines:** Add option to disable `cockpit-machines` package installation due to conflict with CAPEv2 KVM installations ([2b216ae](https://github.com/extra2000/cockpit-formula/commit/2b216ae3c3fa41cd597d323f7fb5e1cec98c48f9))
+
 ## 1.0.0 (2021-01-09)
 
 
