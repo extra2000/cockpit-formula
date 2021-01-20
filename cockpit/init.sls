@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% if grains['osfinger'] != 'Leap-15' %}
+## NOTE: Cannot use grains['osfinger'] because 'osfinger` is not available on Arch Linux. See https://github.com/saltstack/salt/issues/54344.
+{% if salt['grains.get']('osfinger') != 'Leap-15' %}
 include:
   - .package
   - .service
