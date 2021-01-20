@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/extra2000/cockpit-formula/compare/v1.0.1...v1.0.2) (2021-01-20)
+
+
+### Documentations
+
+* **README:** Add license scan report and status ([0d686ca](https://github.com/extra2000/cockpit-formula/commit/0d686cabf135a9c6f98e6d2168ec9a4249187ce1))
+
 ### [1.0.1](https://github.com/extra2000/cockpit-formula/compare/v1.0.0...v1.0.1) (2021-01-09)
 
 
