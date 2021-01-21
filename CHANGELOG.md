@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://github.com/extra2000/cockpit-formula/compare/v1.0.2...v1.0.3) (2021-01-21)
+
+
+### Fixes
+
+* **cockpit/init.sls:** Fix `osfinger` checking failed on Arch Linux ([9eb8ea9](https://github.com/extra2000/cockpit-formula/commit/9eb8ea9f6bafdc2658e8abd6bbfec067746e701d))
+
 ### [1.0.2](https://github.com/extra2000/cockpit-formula/compare/v1.0.1...v1.0.2) (2021-01-20)
 
 
