@@ -5,6 +5,10 @@ Arch: {}
 
 Debian: {}
 
-Suse: {}
+Suse:
+  firewall:
+    package: firewalld
 
-RedHat: {}
+RedHat:
+  firewall:
+    package: firewalld

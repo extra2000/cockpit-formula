@@ -7,3 +7,7 @@ include:
   - .package
   - .service
 {% endif %}
+
+{% if grains['os_family'] == 'Suse' or grains['os_family'] == 'RedHat' %}
+  - .firewall
+{% endif %}

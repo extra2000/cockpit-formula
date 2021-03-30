@@ -8,6 +8,10 @@ cockpit-and-addons-present:
   pkg.installed:
     - pkgs: {{ COCKPIT.packages }}
 
+firewalld-present:
+  pkg.installed:
+    - name: {{ COCKPIT.firewall.package }}
+
 {% if COCKPIT.dashboard.enabled %}
 cockpit-dashboard-present:
   pkg.installed:
