@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/cockpit-formula/compare/v1.0.3...v1.1.0) (2021-03-30)
+
+
+### Features
+
+* Add `firewalld` ([336d8b8](https://github.com/extra2000/cockpit-formula/commit/336d8b8b5eb979eb18ae70f8522988280ad73952))
+* Add KVM installations for Suse and RedHat families ([fae348c](https://github.com/extra2000/cockpit-formula/commit/fae348ce4c06a7ee0a6008ed2152b794e8c65ac0))
+
+
+### Fixes
+
+* **dashboard:** Fix dashboard package name ([1aecc4c](https://github.com/extra2000/cockpit-formula/commit/1aecc4cbbc744db66609923476eeb6b08a868afe))
+
 ### [1.0.3](https://github.com/extra2000/cockpit-formula/compare/v1.0.2...v1.0.3) (2021-01-21)
 
 
