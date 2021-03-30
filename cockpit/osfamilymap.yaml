@@ -10,5 +10,8 @@ Suse:
     package: firewalld
 
 RedHat:
+  dashboard:
+    packages:
+      - cockpit-dashboard.noarch
   firewall:
     package: firewalld
